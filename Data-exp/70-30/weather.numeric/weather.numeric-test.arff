@@ -1,0 +1,12 @@
+@relation weather-weka.filters.unsupervised.instance.RemovePercentage-P30.0-weka.filters.unsupervised.instance.RemovePercentage-P30.0-V
+
+@attribute outlook {sunny,overcast,rainy}
+@attribute temperature numeric
+@attribute humidity numeric
+@attribute windy {TRUE,FALSE}
+@attribute play {yes,no}
+
+@data
+rainy,68,80,FALSE,yes
+rainy,65,70,TRUE,no
+overcast,64,65,TRUE,yes
