@@ -53,8 +53,8 @@ public class WekaPro {
     //Bộ lọc RemovePercentage
     MyKnowledgeModel model = new MyKnowledgeModel(
                 "C:\\Program Files\\Weka-3-8-6\\data\\iris.arff", null, null);
-    model.trainset = model.divideTrainTest(model.dataset, 70, false);
-    model.testset = model.divideTrainTest(model.dataset, 70, true);
+    model.trainset = model.divideTrainTest(model.dataset, 30, false);
+    model.testset = model.divideTrainTest(model.dataset, 30, true);
     System.out.println(model);
         System.out.println(model.trainset.toSummaryString());
         System.out.println(model.testset.toSummaryString());
