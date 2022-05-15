@@ -62,8 +62,8 @@ public class WekaPro {
         
     //Bộ lọc Resample
 //    MyKnowledgeModel model = new MyKnowledgeModel(
-//                "C:\\Program Files\\Weka-3-8-6\\data\\iris.arff", null, null);
-//    model.trainset = model.divideTrainTestR(model.dataset, 70, false);
+//    am Files\\Weka-3-8-6\\data\\iris.arff", null, null);
+//    model.trainset = model            "C:\\Progr.divideTrainTestR(model.dataset, 70, false);
 //    model.testset = model.divideTrainTestR(model.dataset, 70, true);
 //    System.out.println(model);
 //        System.out.println(model.trainset.toSummaryString());
