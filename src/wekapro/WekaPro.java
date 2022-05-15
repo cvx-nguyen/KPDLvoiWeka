@@ -4,6 +4,8 @@
  */
 package wekapro;
 
+import weka.classifiers.trees.J48;
+
 /**
  *
  * @author HOAI NGUYEN
@@ -73,6 +75,9 @@ public class WekaPro {
       model.builDecisionTree();
       model.evaluateDecisionTree();
       System.out.print(model);
+//      model.saveModel("E:\\NetBeans\\Data\\model\\decisiontree.model", model.tree);
+      model.tree=(J48)model.loadModel("E:\\NetBeans\\Data\\model\\decisiontree.model");
+      model.predietClassLable(model.testset);
     }
     
 }
