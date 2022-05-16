@@ -70,14 +70,14 @@ public class WekaPro {
 //    System.out.println(model);
 //        System.out.println(model.trainset.toSummaryString());
 //        System.out.println(model.testset.toSummaryString());
-      MyDecisionTreeModel model = new MyDecisionTreeModel("C:\\Program Files\\Weka-3-8-6\\data\\iris.arff",
+      MyDecisionTreeModel model = new MyDecisionTreeModel("C:\\Program Files\\Weka-3-8-6\\data\\weather.nominal.arff",
                     "-C 0.25 -M 2", null);
       model.builDecisionTree();
       model.evaluateDecisionTree();
       System.out.print(model);
 //      model.saveModel("E:\\NetBeans\\Data\\model\\decisiontree.model", model.tree);
-      model.tree=(J48)model.loadModel("E:\\NetBeans\\Data\\model\\decisiontree.model");
-      model.predietClassLable(model.testset);
+//      model.tree=(J48)model.loadModel("E:\\NetBeans\\Data\\model\\decisiontree.model");
+//      model.predietClassLable(model.testset);
       
     }
     

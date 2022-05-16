@@ -24,8 +24,8 @@ public class MyDecisionTreeModel extends MyKnowledgeModel{
 //Huan luyen mo hinh cay quyet dinh
     public void builDecisionTree() throws Exception{
         //Tao tap du lieu train & test
-        this.trainset = divideTrainTestR(this.dataset, 80, false);
-        this.testset = divideTrainTestR(this.dataset, 80, true);
+        this.trainset = divideTrainTestR(this.dataset, 70, false);
+        this.testset = divideTrainTestR(this.dataset, 70, true);
         this.trainset.setClassIndex(this.trainset.numAttributes() -1);
         this.testset.setClassIndex(this.testset.numAttributes() -1);
         //Thiet lap thong so cho mo hinh cay quyet dinh
@@ -38,7 +38,7 @@ public class MyDecisionTreeModel extends MyKnowledgeModel{
 //Danh gia mo hinh
     public  void evaluateDecisionTree() throws Exception{
         Random rnd = new Debug.Random(1);
-        int folds =10;
+        int folds =2;
         Evaluation eval = new Evaluation(this.trainset);
 //        eval.evaluateModel(tree, this.testset);
         eval.crossValidateModel(tree, this.testset, folds, rnd);
