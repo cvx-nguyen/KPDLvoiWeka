@@ -78,6 +78,7 @@ public class WekaPro {
 //      model.saveModel("E:\\NetBeans\\Data\\model\\decisiontree.model", model.tree);
       model.tree=(J48)model.loadModel("E:\\NetBeans\\Data\\model\\decisiontree.model");
       model.predietClassLable(model.testset);
+      
     }
     
 }
