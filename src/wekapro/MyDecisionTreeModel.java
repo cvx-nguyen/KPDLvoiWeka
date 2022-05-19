@@ -38,12 +38,12 @@ public class MyDecisionTreeModel extends MyKnowledgeModel{
 //Danh gia mo hinh
     public  void evaluateDecisionTree() throws Exception{
         Random rnd = new Debug.Random(1);
-        int folds =2;
+        int folds =10;
         Evaluation eval = new Evaluation(this.trainset);
 //        eval.evaluateModel(tree, this.testset);
         eval.crossValidateModel(tree, this.testset, folds, rnd);
         System.out.println(eval.toSummaryString(
-                "\nKet qua danh gia mo hinh 10-fold cross-validation\n-----\n", false));
+                "\nKet qua danh gia mo hinh 2-fold cross-validation\n-----\n", false));
     }
     
     public void predietClassLable (Instances input) throws Exception{

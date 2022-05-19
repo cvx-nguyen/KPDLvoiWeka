@@ -70,15 +70,21 @@ public class WekaPro {
 //    System.out.println(model);
 //        System.out.println(model.trainset.toSummaryString());
 //        System.out.println(model.testset.toSummaryString());
-      MyDecisionTreeModel model = new MyDecisionTreeModel("C:\\Program Files\\Weka-3-8-6\\data\\weather.nominal.arff",
-                    "-C 0.25 -M 2", null);
-      model.builDecisionTree();
-      model.evaluateDecisionTree();
-      System.out.print(model);
-//      model.saveModel("E:\\NetBeans\\Data\\model\\decisiontree.model", model.tree);
-//      model.tree=(J48)model.loadModel("E:\\NetBeans\\Data\\model\\decisiontree.model");
+//      MyDecisionTreeModel model = new MyDecisionTreeModel("C:\\Program Files\\Weka-3-8-6\\data\\iris.arff",
+//                    "-C 0.25 -M 2", null);
+//      model.builDecisionTree();
+//      model.evaluateDecisionTree();
+//      System.out.print(model);
+////      model.saveModel("E:\\NetBeans\\Data\\model\\decisiontree.model", model.tree);
+//      model.tree=(J48)model.loadModel("E:\\NetBeans\\Data\\model\\decision-tree.model");
 //      model.predietClassLable(model.testset);
       
+        MyNaiveBayesModel model = new MyNaiveBayesModel();
+        model.buildNavieBayes("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+        model.evaluteNaivebayes("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+        model.predictClasslabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
+                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_nb.arff");
+        System.out.println(model);
     }
     
 }
