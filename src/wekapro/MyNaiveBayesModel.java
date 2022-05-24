@@ -72,4 +72,5 @@ public class MyNaiveBayesModel extends MyKnowledgeModel{
         return this.nbayes.toString();
     }
     
+    
 }

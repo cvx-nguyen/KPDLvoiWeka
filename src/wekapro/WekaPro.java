@@ -78,12 +78,23 @@ public class WekaPro {
 ////      model.saveModel("E:\\NetBeans\\Data\\model\\decisiontree.model", model.tree);
 //      model.tree=(J48)model.loadModel("E:\\NetBeans\\Data\\model\\decision-tree.model");
 //      model.predietClassLable(model.testset);
-      
-        MyNaiveBayesModel model = new MyNaiveBayesModel();
-        model.buildNavieBayes("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
-        model.evaluteNaivebayes("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
-        model.predictClasslabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
-                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_nb.arff");
+
+//NaiveBayes
+//        MyNaiveBayesModel model = new MyNaiveBayesModel();
+//        model.buildNavieBayes("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+//        model.evaluteNaivebayes("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+//        model.predictClasslabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
+//                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_nb.arff");
+//        System.out.println(model);
+
+//Mo hinh mang neural
+        MyNeuralNetworkModel model = new MyNeuralNetworkModel("", 
+                                "-L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a -R",
+                                null);
+        model.buildNeuralNetwork("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+        model.evaluateNeuralNetwork("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+        model.predictClassLabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
+                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_ann.arff");
         System.out.println(model);
     }
     
