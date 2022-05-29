@@ -88,13 +88,23 @@ public class WekaPro {
 //        System.out.println(model);
 
 //Mo hinh mang neural
-        MyNeuralNetworkModel model = new MyNeuralNetworkModel("", 
-                                "-L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a -R",
-                                null);
-        model.buildNeuralNetwork("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
-        model.evaluateNeuralNetwork("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
-        model.predictClassLabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
-                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_ann.arff");
+//        MyNeuralNetworkModel model = new MyNeuralNetworkModel("", 
+//                                "-L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a -R",
+//                                null);
+//        model.buildNeuralNetwork("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+//        model.evaluateNeuralNetwork("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+//        model.predictClassLabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
+//                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_ann.arff");
+//        System.out.println(model);
+
+//Mo hinh SVM
+        MySVMModel model = new MySVMModel("",
+                            "-C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K \"weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007\" -calibrator \"weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4\"",
+                            null);
+        model.builSVM("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+        model.evaluateSVM("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+        model.predictClassLable("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
+                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_svm.arff");
         System.out.println(model);
     }
     
