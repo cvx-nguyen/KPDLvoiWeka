@@ -119,9 +119,17 @@ public class WekaPro {
 //        System.out.println(model);
 
 //Mo hinh Bagging
-        MyBaggingModel model = new MyBaggingModel("", null, null);
-        model.buildBaggingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
-        model.evaluateBaggingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+//        MyBaggingModel model = new MyBaggingModel("", null, null);
+//        model.buildBaggingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+//        model.evaluateBaggingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+//        model.predictClassLabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
+//                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_bag.arff");
+//        System.out.println("Finished");
+
+//Mo hinh Boosting
+        MyBoostingModel model = new MyBoostingModel("", null, null);
+        model.buildBoostingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+        model.evaluateBoostingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
         model.predictClassLabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
                                 "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_bag.arff");
         System.out.println("Finished");
