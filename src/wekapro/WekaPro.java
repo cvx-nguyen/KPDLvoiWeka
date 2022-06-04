@@ -109,13 +109,21 @@ public class WekaPro {
 //        System.out.println(model);
     
 //Mo hinh K-lancan
-        MyKNNModel model = new MyKNNModel("",
-                "-K 5 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"", 
-                null);
-        model.buildkNN("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
-        model.evaluatekNN("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+//        MyKNNModel model = new MyKNNModel("",
+//                "-K 5 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"", 
+//                null);
+//        model.buildkNN("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+//        model.evaluatekNN("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+//        model.predictClassLabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
+//                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_knn.arff");
+//        System.out.println(model);
+
+//Mo hinh Bagging
+        MyBaggingModel model = new MyBaggingModel("", null, null);
+        model.buildBaggingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+        model.evaluateBaggingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
         model.predictClassLabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
-                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_knn.arff");
-        System.out.println(model);
+                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_bag.arff");
+        System.out.println("Finished");
     }    
 }
