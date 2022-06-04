@@ -28,7 +28,7 @@ public class MySVMModel extends MyKnowledgeModel{
         //Doc train set vao bo nho
         setTrainset(filename);
         this.trainset.setClassIndex(this.trainset.numAttributes() -1);
-        //Huan luyen mo hinh mang neural
+        //Huan luyen mo hinh mang svm
         this.svm = new SMO();
         svm.setOptions(this.model_options);
         svm.buildClassifier(this.trainset);

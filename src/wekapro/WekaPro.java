@@ -70,6 +70,7 @@ public class WekaPro {
 //    System.out.println(model);
 //        System.out.println(model.trainset.toSummaryString());
 //        System.out.println(model.testset.toSummaryString());
+
 //      MyDecisionTreeModel model = new MyDecisionTreeModel("C:\\Program Files\\Weka-3-8-6\\data\\iris.arff",
 //                    "-C 0.25 -M 2", null);
 //      model.builDecisionTree();
@@ -98,14 +99,23 @@ public class WekaPro {
 //        System.out.println(model);
 
 //Mo hinh SVM
-        MySVMModel model = new MySVMModel("",
-                            "-C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K \"weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007\" -calibrator \"weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4\"",
-                            null);
-        model.builSVM("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
-        model.evaluateSVM("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
-        model.predictClassLable("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
-                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_svm.arff");
-        System.out.println(model);
-    }
+//        MySVMModel model = new MySVMModel("",
+//                            "-C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K \"weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007\" -calibrator \"weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4\"",
+//                            null);
+//        model.builSVM("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+//        model.evaluateSVM("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+//        model.predictClassLable("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
+//                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_svm.arff");
+//        System.out.println(model);
     
+//Mo hinh K-lancan
+        MyKNNModel model = new MyKNNModel("",
+                "-K 5 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"", 
+                null);
+        model.buildkNN("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+        model.evaluatekNN("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+        model.predictClassLabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
+                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_knn.arff");
+        System.out.println(model);
+    }    
 }
