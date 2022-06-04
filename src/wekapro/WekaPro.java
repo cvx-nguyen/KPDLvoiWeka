@@ -127,11 +127,19 @@ public class WekaPro {
 //        System.out.println("Finished");
 
 //Mo hinh Boosting
-        MyBoostingModel model = new MyBoostingModel("", null, null);
-        model.buildBoostingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
-        model.evaluateBoostingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+//        MyBoostingModel model = new MyBoostingModel("", null, null);
+//        model.buildBoostingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+//        model.evaluateBoostingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+//        model.predictClassLabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
+//                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_boost.arff");
+//        System.out.println("Finished");
+
+//Mo hinh Voting
+        MyVotingModel model = new MyVotingModel("", null, null);
+        model.buildVotingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+        model.evaluateVotingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
         model.predictClassLabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
-                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_bag.arff");
+                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_vote.arff");
         System.out.println("Finished");
     }    
 }
