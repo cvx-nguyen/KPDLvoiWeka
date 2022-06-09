@@ -143,11 +143,17 @@ public class WekaPro {
 //        System.out.println("Finished");
 
 //Mo hinh Blending
-        MyBlendingModel model = new MyBlendingModel("", null, null);
-        model.buildBlendingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
-        model.evaluateBlendingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
-        model.predictClassLabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
-                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_blending.arff");
+//        MyBlendingModel model = new MyBlendingModel("", null, null);
+//        model.buildBlendingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-train.arff");
+//        model.evaluateBlendingModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-test.arff");
+//        model.predictClassLabel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_unlable.arff", 
+//                                "E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_predict_blending.arff");
+//        System.out.println("Finished");
+
+//Phuong phap KMeans
+        MyKMeansModel model = new MyKMeansModel("", null, null);
+        model.buildKMeansModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-cluster-train.arff");
+        model.predictCluster("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_cluster_unlable.arff");
         System.out.println("Finished");
     }    
 }
