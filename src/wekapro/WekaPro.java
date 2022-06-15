@@ -151,8 +151,14 @@ public class WekaPro {
 //        System.out.println("Finished");
 
 //Phuong phap KMeans
-        MyKMeansModel model = new MyKMeansModel("", null, null);
-        model.buildKMeansModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-cluster-train.arff");
+//        MyKMeansModel model = new MyKMeansModel("", null, null);
+//        model.buildKMeansModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-cluster-train.arff");
+//        model.predictCluster("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_cluster_unlable.arff");
+//        System.out.println("Finished");
+
+//Phuong phap EM
+        MyEMModel model = new MyEMModel("", null, null);
+        model.buildEMModel("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris-cluster-train.arff");
         model.predictCluster("E:\\NetBeans\\Data\\Weka\\Data-exp\\iris_cluster_unlable.arff");
         System.out.println("Finished");
     }    
